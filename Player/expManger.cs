@@ -10,11 +10,11 @@ public class expManger : MonoBehaviour
     public int level;
     public int currentExp;
     public int expToLevel = 10;
-    public float expGrowMultiplier = 1.2f;//ÒâÎ¶×ÅÃ¿´ÎÉı¼¶ËùĞè¾­Ñé»áÔö¼Ó°Ù·ÖÖ®¶şÊ®;
+    public float expGrowMultiplier = 1.2f;//æ„å‘³ç€æ¯æ¬¡å‡çº§æ‰€éœ€ç»éªŒä¼šå¢åŠ ç™¾åˆ†ä¹‹äºŒå;
     public Slider expSlider;
     public TMP_Text currentLevelText;
 
-    public static event Action<int> OnLevelUp;//¼àÌıÊÂ¼ş´«ÈëÒ»¸öÕûÊıÃüÃûÎªonlevelup
+    public static event Action<int> OnLevelUp;//ç›‘å¬äº‹ä»¶ä¼ å…¥ä¸€ä¸ªæ•´æ•°å‘½åä¸ºonlevelup
 
 
     private void Start()
@@ -36,12 +36,12 @@ public class expManger : MonoBehaviour
     {
         Enemy_Health.OnMonsterDefeated += GainExperience;
     }
-    private void OnDisable()//È¡Ïû¶©ÔÄ¸ÃÊÂ¼ş¼àÌı£¬
+    private void OnDisable()//å–æ¶ˆè®¢é˜…è¯¥äº‹ä»¶ç›‘å¬ï¼Œ
     {
         Enemy_Health.OnMonsterDefeated -= GainExperience;
     }
 
-    public void GainExperience(int amount)//´´½¨Ò»¸ö¹«¹²µÄvoid·½·¨£¬½Ğ¡°»ñÈ¡¾­Ñé¡±,Ëü½ÓÊÕÒ»¸öÕûÊı²ÎÊı
+    public void GainExperience(int amount)//åˆ›å»ºä¸€ä¸ªå…¬å…±çš„voidæ–¹æ³•ï¼Œå«â€œè·å–ç»éªŒâ€,å®ƒæ¥æ”¶ä¸€ä¸ªæ•´æ•°å‚æ•°
     {
         currentExp += amount;
         if(currentExp >= expToLevel)
