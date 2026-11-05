@@ -9,21 +9,21 @@ public class PlayerHealth : MonoBehaviour
     public TMP_Text healthText;
     public Animator healthTextAnim;
 
-    private void Start()//`Start`Ö»Ö´ĞĞÒ»´Î£¬²»ÊÇÃ¿´ÎÑªÁ¿±ä»¯¶¼Ö´ĞĞ£¬ÑªÁ¿±ä»¯¿¿ `ChangeHealth` ¸üĞÂÎÄ×Ö¡£
+    private void Start()//`Start`åªæ‰§è¡Œä¸€æ¬¡ï¼Œä¸æ˜¯æ¯æ¬¡è¡€é‡å˜åŒ–éƒ½æ‰§è¡Œï¼Œè¡€é‡å˜åŒ–é  `ChangeHealth` æ›´æ–°æ–‡å­—ã€‚
     {
         healthText.text = "HP: " + StateManger.instance.currentHealth + "/ " + StateManger.instance.maxHealth;
-        // ÓÎÏ·Æô¶¯Ê±³õÊ¼»¯ÑªÁ¿UI£¬°Ñµ±Ç°ÑªÁ¿¡¢×î´óÑªÁ¿Æ´½Ó³É"HP: 100/100"¸ñÊ½ÏÔÊ¾ÔÚÎÄ±¾ÉÏ
+        // æ¸¸æˆå¯åŠ¨æ—¶åˆå§‹åŒ–è¡€é‡UIï¼ŒæŠŠå½“å‰è¡€é‡ã€æœ€å¤§è¡€é‡æ‹¼æ¥æˆ"HP: 100/100"æ ¼å¼æ˜¾ç¤ºåœ¨æ–‡æœ¬ä¸Š
     }
 
 
 
     public void ChangeHealth(int amount)
     {
-        StateManger.instance.currentHealth += amount;//µ±Ç°ÑªÁ¿¼ÓÉÏ´«Èë²ÎÊıamountµÈÓÚµ±Ç°ÑªÁ¿;
+        StateManger.instance.currentHealth += amount;//å½“å‰è¡€é‡åŠ ä¸Šä¼ å…¥å‚æ•°amountç­‰äºå½“å‰è¡€é‡;
         healthTextAnim.Play("TextUpdate");
 
         healthText.text = "HP: " + StateManger.instance.currentHealth + "/ " + StateManger.instance.maxHealth;
-        if (StateManger.instance.currentHealth <= 0)//ÅĞ¶Ïµ±Ç°ÑªÁ¿£¬Èç¹ûÑªÁ¿Ğ¡ÓÚ»òµÈÓÚ0Íæ¼ÒÖ±½ÓÏûÊ§;
+        if (StateManger.instance.currentHealth <= 0)//åˆ¤æ–­å½“å‰è¡€é‡ï¼Œå¦‚æœè¡€é‡å°äºæˆ–ç­‰äº0ç©å®¶ç›´æ¥æ¶ˆå¤±;
         {
             gameObject.SetActive(false);
         }
