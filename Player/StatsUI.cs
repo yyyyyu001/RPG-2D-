@@ -38,11 +38,11 @@ public class StatsUI : MonoBehaviour
 
     }
 
-    public void updateDamage()//创建一个公有的void方法，叫updateDamage
+    public void updateDamage()//鍒涘缓涓�涓叕鏈夌殑void鏂规硶锛屽彨updateDamage
     {
         statsSlots[0].GetComponentInChildren<TMP_Text>().text = "Damage: " + StateManger.instance.damage;
     }
-    public void updateSpeed()//创建一个公有的void方法，叫updateSpeed
+    public void updateSpeed()//鍒涘缓涓�涓叕鏈夌殑void鏂规硶锛屽彨updateSpeed
     {
         statsSlots[1].GetComponentInChildren<TMP_Text>().text = "Speed: " + StateManger.instance.speed;
     }
