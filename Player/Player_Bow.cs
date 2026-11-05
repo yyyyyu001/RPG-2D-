@@ -61,8 +61,8 @@ public class Player_Bow : MonoBehaviour
     {
         if (shootTimer <= 0)
         {
-            arrow arrow = Instantiate(arrowPrefab, LaunchPoint.position, Quaternion.identity).GetComponent<arrow>();//instantiate¶¯Ì¬Éú³ÉÔ¤ÖÆÌåµÄºËĞÄº¯Êı
-                                                                                                                    //ÒªÉú³ÉÄÄ¸öÎïÌå£¬ÔÚÄÄ¸ö×ø±êÎ»ÖÃÉú³É£¬Éú³É³öÀ´µÄÎïÌåĞı×ª½Ç¶ÈQuaternion.identityÁãĞı×ª£»
+            arrow arrow = Instantiate(arrowPrefab, LaunchPoint.position, Quaternion.identity).GetComponent<arrow>();//instantiateåŠ¨æ€ç”Ÿæˆé¢„åˆ¶ä½“çš„æ ¸å¿ƒå‡½æ•°
+                                                                                                                    //è¦ç”Ÿæˆå“ªä¸ªç‰©ä½“ï¼Œåœ¨å“ªä¸ªåæ ‡ä½ç½®ç”Ÿæˆï¼Œç”Ÿæˆå‡ºæ¥çš„ç‰©ä½“æ—‹è½¬è§’åº¦Quaternion.identityé›¶æ—‹è½¬ï¼›
             arrow.direction = aimDirection;
             shootTimer = shootcooldown;
         }
