@@ -9,12 +9,12 @@ public class Elevation_Entry : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player") //¼ì²éÊÇ·ñÊÇÍæ¼Ò½øÈëÕâ¸öÅö×²Ìå
+        if (collision.gameObject.tag == "Player") //æ£€æŸ¥æ˜¯å¦æ˜¯ç©å®¶è¿›å…¥è¿™ä¸ªç¢°æ’ä½“
         {
             foreach (Collider2D mountain in mountainColliders)
             {
-                //±éÀú¼¯ºÏÖĞµÄÃ¿Ò»¸öÏîÄ¿£»//Collider2D±äÁ¿ÀàĞÍ
-                //¶ÔÓÚÃ¿Ò»¸öCollider2DÅö×²ÌåÃüÃûÎªmountainÔÚmountainCollidersÕâ¸ö¼¯ºÏÖĞ£»
+                //éå†é›†åˆä¸­çš„æ¯ä¸€ä¸ªé¡¹ç›®ï¼›//Collider2Då˜é‡ç±»å‹
+                //å¯¹äºæ¯ä¸€ä¸ªCollider2Dç¢°æ’ä½“å‘½åä¸ºmountainåœ¨mountainCollidersè¿™ä¸ªé›†åˆä¸­ï¼›
                 mountain.enabled = false;
             }
             foreach (Collider2D boundary in boundaryColliders)
