@@ -40,7 +40,7 @@ public class inventoryManager : MonoBehaviour
 
         foreach (var slot in itemSlots)
         {
-            if(slot.itemso == itemso && slot.quantity < itemso.stackSize)//Èç¹û¸ñ×ÓµÄ½Å±¾»¯¶ÔÏóÓëÎÒÃÇ¸Õ¼ñÆðµÄÎïÆ·Æ¥Åä£¬²¢ÇÒ¸ñ×ÓÀïµÄÊýÁ¿Ð¡ÓÚ¸ÃÎïÆ·µÄ×î´ó¶ÑµþÊýÁ¿
+            if(slot.itemso == itemso && slot.quantity < itemso.stackSize)//å¦‚æžœæ ¼å­çš„è„šæœ¬åŒ–å¯¹è±¡ä¸Žæˆ‘ä»¬åˆšæ¡èµ·çš„ç‰©å“åŒ¹é…ï¼Œå¹¶ä¸”æ ¼å­é‡Œçš„æ•°é‡å°äºŽè¯¥ç‰©å“çš„æœ€å¤§å †å æ•°é‡
             {
                 int availableSpace = itemso.stackSize - slot.quantity;
                 int amountToAdd = Mathf.Min(availableSpace, quantity);
