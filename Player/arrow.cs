@@ -6,7 +6,7 @@ public class arrow : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Vector2 direction = Vector2.right;
-    public float lifeSpawn = 2;//´æÔÚÊ±¼ä
+    public float lifeSpawn = 2;//Â´Ã¦Ã”ÃšÃŠÂ±Â¼Ã¤
     public float speed;
     public int damage;
     public float knockbackForce;
