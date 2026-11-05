@@ -6,9 +6,9 @@ using TMPro;
 public class StateManger : MonoBehaviour
 {
 
-    public TMP_Text healthText;//Ã¿µ±×´Ì¬Öµ±¾Éí¸Ä±äÊ±£¬ÎÒÃÇ¾ÍÄÜÊµ¼Ê¸Ä±äÆÁÄ»ÉÏÏÔÊ¾µÄ×î´óÉúÃüÖµ;
+    public TMP_Text healthText;//æ¯å½“çŠ¶æ€å€¼æœ¬èº«æ”¹å˜æ—¶ï¼Œæˆ‘ä»¬å°±èƒ½å®é™…æ”¹å˜å±å¹•ä¸Šæ˜¾ç¤ºçš„æœ€å¤§ç”Ÿå‘½å€¼;
     public StatsUI statsUI;
-    public static StateManger instance;//¾²Ì¬ÊıÖµ¹ÜÀíÆ÷ÊµÀı,Í¨¹ıÉèÎª¾²Ì¬¾Í¿ÉÒÔÈ·±£Õâ¸ö±äÁ¿Ö»ÓĞÒ»¸ö¸±±¾;
+    public static StateManger instance;//é™æ€æ•°å€¼ç®¡ç†å™¨å®ä¾‹,é€šè¿‡è®¾ä¸ºé™æ€å°±å¯ä»¥ç¡®ä¿è¿™ä¸ªå˜é‡åªæœ‰ä¸€ä¸ªå‰¯æœ¬;
     [Header("Combat States")]
     public int damage;
     public float weaponRange;
