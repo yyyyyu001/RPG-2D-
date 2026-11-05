@@ -21,7 +21,7 @@ public class Player_Combat : MonoBehaviour
     {
         if(timer > 0)
         {
-            timer -= Time.deltaTime;//ÈÃtimeµ¹¼ÆÊ±
+            timer -= Time.deltaTime;//ÃˆÃƒtimeÂµÂ¹Â¼Ã†ÃŠÂ±
         }
     }
     public void Attack()
