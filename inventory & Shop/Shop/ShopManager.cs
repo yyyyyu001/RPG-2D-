@@ -29,7 +29,7 @@ public class ShopManager : MonoBehaviour
 
 
 
-[System.Serializable]//·ÃÎÊsystemÃüÃû¿Õ¼ä£¬²¢ÔÊĞíÎÒÃÇĞòÁĞ»¯Õâ¸öÀà£»
+[System.Serializable]//è®¿é—®systemå‘½åç©ºé—´ï¼Œå¹¶å…è®¸æˆ‘ä»¬åºåˆ—åŒ–è¿™ä¸ªç±»ï¼›
 public class ShopItems
 {
     public ItemSO itemso;
