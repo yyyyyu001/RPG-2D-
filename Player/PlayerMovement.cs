@@ -16,9 +16,9 @@ public class NewBehaviourScript : MonoBehaviour
 
     public Player_Combat player_Combat;
 
-    private void Update()//ÊäÈë·´À¡×î¿ìµÄ·½Ê½
+    private void Update()//è¾“å…¥åé¦ˆæœ€å¿«çš„æ–¹å¼
     {
-        if (Input.GetButtonDown("slash") && player_Combat.enabled == true )//¼ì²éÊÇ·ñ°´ÏÂÁË¹¥»÷¼ü//¼ÇµÃĞŞ¸´
+        if (Input.GetButtonDown("slash") && player_Combat.enabled == true )//æ£€æŸ¥æ˜¯å¦æŒ‰ä¸‹äº†æ”»å‡»é”®//è®°å¾—ä¿®å¤
         {
             player_Combat.Attack();
         }
@@ -26,7 +26,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
 
     // Fixed Update is called 50x frame
-    void FixedUpdate()//fixedupdate ÎÈ¶¨ÇÒ¹æÂÉ
+    void FixedUpdate()//fixedupdate ç¨³å®šä¸”è§„å¾‹
     {
         if(isShooting == true)
         {
@@ -45,7 +45,7 @@ public class NewBehaviourScript : MonoBehaviour
             }
 
 
-            //mathf.abs×÷ÓÃ¾ÍÊÇ½«·¢ËÍ¸ø¶¯»­¿ØÖÆÆ÷µÄÊıÖµ×ª»»ÎªÕıÊı£¨¾ø¶ÔÖµº¯Êı£©£»
+            //mathf.absä½œç”¨å°±æ˜¯å°†å‘é€ç»™åŠ¨ç”»æ§åˆ¶å™¨çš„æ•°å€¼è½¬æ¢ä¸ºæ­£æ•°ï¼ˆç»å¯¹å€¼å‡½æ•°ï¼‰ï¼›
             anim.SetFloat("horizontal", Mathf.Abs(horizontal));
             anim.SetFloat("vertical", Mathf.Abs(vertical));
 
@@ -67,7 +67,7 @@ public class NewBehaviourScript : MonoBehaviour
         rb.velocity = direction * force;
         StartCoroutine(KnockbackCounter(stunTime));
     }
-    IEnumerator KnockbackCounter(float stunTime)//Ã¶¾ÙÆ÷»÷ÍË¼ÆÊıÆ÷
+    IEnumerator KnockbackCounter(float stunTime)//æšä¸¾å™¨å‡»é€€è®¡æ•°å™¨
     {
         yield return new WaitForSeconds(stunTime);
         rb.velocity = Vector2.zero;
